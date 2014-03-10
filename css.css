@@ -1,0 +1,164 @@
+/*
+Styles related DIRECTLY with jQuery-simple-scroll-edge
+*/
+.simple-scroll-edge-top,
+.simple-scroll-edge-right,
+.simple-scroll-edge-bottom,
+.simple-scroll-edge-left
+{
+	position: absolute;
+	z-index: 9999;
+	display: none;
+}
+
+.simple-scroll-edge-top,
+.simple-scroll-edge-right,
+.simple-scroll-edge-left
+{
+	top: 0;
+}
+.simple-scroll-edge-bottom
+{
+	bottom: 0;
+}
+
+.simple-scroll-edge-right
+{
+	right: 0;
+}
+.simple-scroll-edge-left
+{
+	left: 0;
+}
+
+.simple-scroll-edge-left,
+.simple-scroll-edge-right
+{
+	height: 100%;
+	width: .0625rem;
+	background-color: red;
+}
+.simple-scroll-edge-top,
+.simple-scroll-edge-bottom
+{
+	height: .0625rem;
+	width: 100%;
+	background-color: red;
+}
+
+/*
+Styles used to page things look nice :)
+*/
+#blue-five .simple-scroll-edge-top,
+#blue-five .simple-scroll-edge-bottom
+{
+	height: 5px;
+	background-color: #216ed9;
+}
+#lr-shadow .simple-scroll-edge-left,
+#lr-shadow .simple-scroll-edge-right
+{
+	width: 1px;
+	background-color: #22d921;
+	-webkit-box-shadow: 0 0 10px 10px black;
+}
+
+*,
+*:before,
+*:after
+{
+	box-sizing: border-box;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+body
+{
+	padding: 48px 0;
+	font: 16px/16px Helvetica, sans-serif;
+	background-color: white;
+}
+h1,h2,h3,h4,h5,h6
+{
+	color: #9b21d9;
+	line-height: 2em;
+}
+h2
+{
+	font-weight: normal;
+}
+
+h1 + p,
+h3 + p
+{
+	margin-bottom: 32px;
+	color: #ff2727;
+}
+
+p + p
+{
+	margin-top: 1em;
+}
+
+header
+{
+	width: 50%;
+	border-radius: 8px;
+	margin: 0 auto;
+	margin-bottom: 48px;
+	padding: 32px;
+	background-color: #ff2727;
+	background-image: -webkit-linear-gradient(#ff2727, #9b21d9);
+}
+header h1,
+header h2
+{
+	color: white;
+}
+
+.variable
+{
+	color: #216ed9;
+}
+.comment
+{
+	color: black;
+}
+
+.wrapper
+{
+	width: 480px;
+	margin: 0 auto;
+}
+.wrapper + .wrapper
+{
+	margin-top: 96px;
+}
+
+.wide-content
+{
+	width: 1000px;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+td
+{
+	padding: 5px 15px;
+	border: 1px solid gray;
+	width: 20%;
+}
+
+@media screen and (max-width: 959px){
+	.wrapper,
+	header
+	{
+		width: 90%;
+	}
+}
