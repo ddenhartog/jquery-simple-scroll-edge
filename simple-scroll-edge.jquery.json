@@ -1,8 +1,8 @@
 {
     "name": "simple-scroll-edge",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "title": "jQuery Simple Scroll Edge",
-    "description": "An easy way to add a visual que to scrollable content.",
+    "description": "An easy way to add a visual queue to scrollable content.",
     "keywords": ["scroll", "scrolled", "scroller", "scrolling", "edge", "simple"],
     "author": {
         "name": "Douglas Denhartog",
@@ -16,5 +16,6 @@
     ],
     "dependencies": {
         "jquery": ">=1.7.0"
-    }
+    },
+    "demo": "http://ddenhartog.github.io/jquery-simple-scroll-edge/"
 }
