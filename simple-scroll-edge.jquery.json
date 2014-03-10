@@ -1,6 +1,6 @@
 {
     "name": "simple-scroll-edge",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "jQuery Simple Scroll Edge",
     "description": "An easy way to add a visual que to scrollable content.",
     "keywords": ["scroll", "scrolled", "scroller", "scrolling", "edge", "simple"],
