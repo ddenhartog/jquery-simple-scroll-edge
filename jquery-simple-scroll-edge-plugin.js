@@ -35,7 +35,7 @@ $.fn.simpleScrollEdge = function(options)
 		var $this = $(this),
 			inner_container = document.createElement('div');
 		inner_container.className = 'simple-scroll-edge-inner-container';
-		inner_container.style.overflowX = 'scroll';
+		inner_container.style.overflow = 'auto';
 
 		outer_container.appendChild(inner_container);
 
