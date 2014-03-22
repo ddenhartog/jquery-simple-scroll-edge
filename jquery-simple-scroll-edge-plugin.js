@@ -6,13 +6,36 @@ $.fn.simpleScrollEdge = function(options)
 
 	return this.each(function()
 	{
-		var outer_container = document.createElement('div');
+		var $this = $(this),
+			inner_container = document.createElement('div'),
+			outer_container = document.createElement('div');
 
-		function createEdge(edge_name)
+		inner_container.className = 'simple-scroll-edge-inner-container';
+		inner_container.left = '0';  //http://jsfiddle.net/2Kwsc/
+		inner_container.style.overflow = 'hidden';
+
+		/*
+		function styleEdge(e, h, w)
 		{
-			var element = document.createElement('div');
-			element.className = 'simple-scroll-edge-' + edge_name;
-			outer_container.appendChild(element);
+			e.style.height = h;
+			e.style.width = w;
+			e.style.backgroundColor = settings.bg_color;
+			return e;
+		}
+		*/
+
+		function createEdge(edge)
+		{
+			var e = document.createElement('div');
+			e.className = 'simple-scroll-edge-' + edge;
+			e.style.position = 'absolute';
+			e.style[edge] = '0';
+			e.style.zIndex = '9999';
+			e.style.display = 'none';
+
+			//e = edge === 'top' || edge === 'bottom' ? styleEdge(e, '1px', '100%') : styleEdge(e, '100%', '1px');
+
+			outer_container.appendChild(e);
 		}
 
 		if(settings.top_edge)
@@ -32,10 +55,14 @@ $.fn.simpleScrollEdge = function(options)
 			createEdge('left');
 		}
 
-		var $this = $(this),
-			inner_container = document.createElement('div');
-		inner_container.className = 'simple-scroll-edge-inner-container';
-		inner_container.style.overflow = 'auto';
+		if(settings.top_edge || settings.bottom_edge)
+		{
+			inner_container.style.overflowY = 'scroll';
+		}
+		if(settings.left_edge || settings.right_edge)
+		{
+			inner_container.style.overflowX = 'scroll';
+		}
 
 		outer_container.appendChild(inner_container);
 
