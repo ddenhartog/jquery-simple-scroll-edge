@@ -2,7 +2,7 @@
     "name": "simple-scroll-edge",
     "version": "1.0.5",
     "title": "jQuery Simple Scroll Edge",
-    "description": "An easy way to add a visual queue to scrollable content.",
+    "description": "An easy way to add a visual cue to scrollable content.",
     "keywords": ["scroll", "scrolled", "scroller", "scrolling", "edge", "simple"],
     "author": {
         "name": "Douglas Denhartog",
